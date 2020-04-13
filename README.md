@@ -21,7 +21,7 @@ This project is for Mitsubishi air conditioner owners which want to control thei
 # Quick start
 
 
-#Special thanks
+# Special thanks
 ... to SwiCago for providing the Arduino library to control Mitsubishi Heat Pumps via connector CN105:
 
 https://github.com/SwiCago/HeatPump
