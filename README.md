@@ -12,6 +12,7 @@ There are a lot of projects out there which use e.g. MQTT but I wanted just simp
 2. The device handler makes standard http calls to the web server running on the ESP32 to control the air conditioner.
 Some of you might raise their hands now and shout "Ohh no, that's not secure!". You are right but the communication is only happening in your local network as only your SmartThings hub is normally direct talking to your ESP32. 
 The web server on the ESP32 also serves a small root web page just showing you the current air conditioner status plus the latest log output and aalso enables you to reboot the ESP32 if it's required.
+3. I also added a small OLED display and 3 LED's to show the status of the air conditioner and some other useful information. A reboot button for the ESP32 completes the setup.
 
 # Requirements 
 1. A Mitsubishi air conditioner which is supported by the [HeatPump](https://github.com/SwiCago/HeatPump) project.
