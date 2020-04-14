@@ -18,7 +18,7 @@ The web server on the ESP32 also serves a small root web page just showing you t
 4. A SSD1306 OLED I2C Display capable to run at 3.3V DC. (e.g. 0.91 inch 128x32 dots)
 5. 3 LEDs (Red, Yellow, Green) with resistors to restrict their power usage to below 9mA @ 3.3V DC.
 6. 1 Bi-Directional Logic Level Shifter to shift (RX & TX) signals between 5V DC and 3V DC.
-7. A JST 2.0 PA plug (5-pin) with wires. (PA plugs are sometimes not easy to get. PH plugs will be fine too - with some tweaking -).
+7. A JST 2.0 PA plug (5-pin) with wires. PA plugs are sometimes not easy to get. I used PH plugs with some tweaking. PH plugs must be inserted the air conditioner side connector 180 degrees turned otherwise they don't fit !
 8. A small button touch switch.
 9. Some jumper cables and heat shrinking tubing.
 10. Some kind of housing if you don't want to place the components direct in your aircon.
