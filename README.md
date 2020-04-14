@@ -17,7 +17,7 @@ This project is for Mitsubishi air conditioner owners which want to control thei
 9. Some jumper cables and heat shrinking tubing.
 10. A little bit soldering knowledge.
 
-So you will end up with a bunch of parts e.g. like this (your parts and amounts might vary based on your final assamble):
+So you will end up with a bunch of parts e.g. like this (your parts and amounts might vary based on your final assambly):
 ![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/Parts.jpg)
 
 
