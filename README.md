@@ -24,8 +24,9 @@ The web server on the ESP32 also serves a small root web page just showing you t
 10. Some kind of housing if you don't want to place the components direct in your aircon.
 11. A little bit soldering knowledge.
 
-So you will end up with a bunch of parts e.g. like this (your parts and amounts might vary based on your final assambly):
+So you will end up with a bunch of parts costing you normally not more than 10 USD, e.g. like this:
 ![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/Parts.jpg)
+"Your parts and amounts might vary based on your final assambly"
 
 # Quick start
 
