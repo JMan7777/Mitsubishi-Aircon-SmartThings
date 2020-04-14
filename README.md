@@ -1,9 +1,15 @@
 # Mitsubishi-Aircon-SmartThings
 Arduino sketch (.ino) and SmartThings device handler to control Mitsubishi air conditioners via Samsung SmartThings.
 
-
 # What can you do with this project?
 This project is for Mitsubishi air conditioner owners which want to control their aircons via Samsung SmartThings.
+There are a lot of projects out there which use e.g. MQTT but I wanted just simply control my Mitsubishi air conditioners direct from my Samsung SmartThings Classic app.
+
+# How it works (Overview)?
+1. You need to use the provided device handler of this project and add the related SmartThings device.
+2. The device handler makes standard http calls to the web server running on the ESP32 to control the air conditioner.
+Some of you might raise their hands now and shout "Ohh no, that's not secure!". You are right but the communication is only happening in your local network as only your SmartThings hub is normally direct talking to your device. 
+The web server on the ESP32 also serves a small root web page just showing you the current air conditioner status plus the latest log output and aalso enables you to reboot the ESP32 if it's required.
 
 # Requirements 
 1. A Mitsubishi air conditioner which is supported by the [HeatPump](https://github.com/SwiCago/HeatPump) project.
@@ -15,14 +21,13 @@ This project is for Mitsubishi air conditioner owners which want to control thei
 7. A JST 2.0 PA plug with wires. (PA plugs are sometimes not easy to get. PH plugs will be fine too - with some tweaking -).
 8. A small button touch switch.
 9. Some jumper cables and heat shrinking tubing.
-10. A little bit soldering knowledge.
+10. Some kind of housing if you don't want to place the components direct in your aircon.
+11. A little bit soldering knowledge.
 
 So you will end up with a bunch of parts e.g. like this (your parts and amounts might vary based on your final assambly):
 ![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/Parts.jpg)
 
-
 # Quick start
-
 
 # Special thanks
 ... to SwiCago for providing the Arduino library to control Mitsubishi Heat Pumps via connector CN105:
@@ -37,6 +42,5 @@ https://www.gnu.org/licenses/lgpl.html
 However, license T&C of 3rd party libraries used by this project are applicable.
 
 # Disclaimer - "Use at your own risk!"
-
 Despite having reasonable technical expertise I'm giving absolutely no guarantee that the projects / tutorials / any piece information presented in this project website are 100% correct, but best efforts has been made to minimize the errors and I believe the project present on this website works. Users of this project must do their research and understand the concepts to the core before proceeding with the given project.
 I cannot be held responsible for any damages in the form of physical loss / monetary loss or any kind of loss that comes as the result of making use of information and instructions that are presented in this website.
