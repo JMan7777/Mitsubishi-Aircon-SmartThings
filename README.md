@@ -18,7 +18,7 @@ This project is for Mitsubishi air conditioner owners which want to control thei
 10. A little bit soldering knowledge.
 
 So you will end up with a bunch of parts e.g. like this (your parts and amounts might vary based on your final assamble):
-![Parts List](https://octodex.github.com/images/yaktocat.png)
+![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/Parts.jpg)
 
 
 # Quick start
