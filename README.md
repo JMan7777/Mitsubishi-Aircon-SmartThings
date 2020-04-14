@@ -33,7 +33,8 @@ So you will end up with a bunch of parts costing you normally not more than 10 U
 
 # Connection Diagram
 Assemble your parts according to the diagram. 
-**_Attention:_** Before connectiong the 5 wires comming from your air conditoner to your assembly, always check the wiring via a multimeter to ensure it's correct. Especially check for 12V, 5V and GND!
+
+**_Attention:_** Before connectiong the 5 wires coming from your air conditoner to your assembly, always check the wiring via a multimeter to ensure it's correct. Especially check for 12V, 5V and GND!
 ![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/Connection_Diagramm.jpg)
 
 # Comments
