@@ -24,7 +24,7 @@ The web server on the ESP32 also serves a small root web page just showing you t
 7. A JST 2.0 PA plug (5-pin) with wires. Unfortunately PA plugs are sometimes not easy to get. I used PH plugs with some tweaking. **Attention:** PH plugs must be inserted to the air conditioner side CN105 connector 180 degrees turned otherwise they don't fit!
 8. A small button touch switch.
 9. Some jumper cables and heat shrinking tubing.
-10. Some kind of housing if you don't want to place the components direct in your aircon.
+10. Some kind of housing if you don't want to place the components direct in your air conditioner. Even you could fit all the parts in the little detachable corner, L-shape plastic piece on the right site of your air conditioner, I decided to put mine external.
 11. A little bit soldering knowledge.
 
 So you will end up with a bunch of parts costing you normally not more than 10 USD, e.g. like this:
