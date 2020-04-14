@@ -1,7 +1,7 @@
+# !!! THIS PROJECT AND THIS WEBSITE IS STILL WORK IN PROGRESS. DO NOT USE IT YET !!!
+
 # Mitsubishi-Aircon-SmartThings
 Arduino sketch (.ino) and SmartThings device handler to control Mitsubishi air conditioners via Samsung SmartThings.
-
-#**THIS PROJECT IS STILL WORK IN PROGRESS**
 
 # What can you do with this project?
 This project is for Mitsubishi air conditioner owners which want to control their aircons via Samsung SmartThings.
@@ -39,6 +39,12 @@ Assemble your parts according to the diagram.
 You might be wondering on the following things:
 1. Why I'm not using the TX/RX pins on the ESP32 to connect the air conditioner to. My code uses also serial console output for debugging/logging and the console shares the Serial port. I wanted to prevent any interference and using therefore seperate pins.
 2. Why I'm using not the 5V from the air conditioner to power the ESP32 directly. While it most likely works to power the ESP32 directly via 5V I decided to be better save than sorry and draw the power from 12V as there are no technical descriptions available on how much power can be drawn from 5V. The original Mitsubishi Wifi dongle also seems to use 12V for powering.
+
+# ESP32 Arduino Sketch
+Work in progress
+
+# SmartThings Device Handler
+Work in progress
 
 # Special thanks
 ... to SwiCago for providing the Arduino library to control Mitsubishi Heat Pumps via connector CN105:
