@@ -7,15 +7,18 @@ This project is for Mitsubishi air conditioner owners which want to control thei
 
 # Requirements 
 1. A Mitsubishi air conditioner which is supported by the [HeatPump](https://github.com/SwiCago/HeatPump) project.
-2. An ESP32 module (e.g. ESP32-DevKitC)
+2. An ESP32 module. Can have integrated or external antenna. (e.g. ESP32-DevKitC)
 3. A DC-DC Buck Step-down power converter to convert 12V DC to 5V DC. (Don't use AMS1117 converters.)
-4. A SSD1306 OLED I2C Display capable to run at 3.3V DC (e.g. 0.91 inch 128x32 dots)
-5. 3 LEDs (Red, Yellow, Green) with resistors to restrict their power usage to below 9mA@3.3V DC.
+4. A SSD1306 OLED I2C Display capable to run at 3.3V DC. (e.g. 0.91 inch 128x32 dots)
+5. 3 LEDs (Red, Yellow, Green) with resistors to restrict their power usage to below 9mA @ 3.3V DC.
 6. 1 Bi-Directional Logic Level Shifter to shift (RX & TX) signals between 5V DC and 3V DC.
 7. A JST 2.0 PA plug with wires. (PA plugs are sometimes not easy to get. PH plugs will be fine too - with some tweaking -).
 8. A small button touch switch.
 9. Some jumper cables and heat shrinking tubing.
 10. A little bit soldering knowledge.
+
+So you will end up with a bunch of parts e.g. like this (your parts and amounts might vary based on your final assamble):
+![Parts List](https://octodex.github.com/images/yaktocat.png)
 
 
 # Quick start
