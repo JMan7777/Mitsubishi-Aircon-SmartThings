@@ -27,6 +27,8 @@ The web server on the ESP32 also serves a small root web page just showing you t
 10. Some kind of housing if you don't want to place the components direct in your air conditioner. Even you could fit all the parts in the little detachable corner, L-shape plastic piece on the right site of your air conditioner, I decided to put mine external.
 11. A little bit soldering knowledge.
 
+_The OLED display and 3 LED's are actually optional. So even without it this project should work for you._
+
 So you will end up with a bunch of parts costing you normally not more than 10 USD, e.g. like this:
 ![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Parts.jpg)
 "Your parts and amounts might vary based on your final assambly"
