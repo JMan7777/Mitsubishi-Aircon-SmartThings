@@ -41,9 +41,11 @@ Assemble your parts according to the diagram.
 **_Attention:_** Before connectiong the 5 wires coming from your air conditoner to your assembly, always check the wiring via a multimeter to ensure it's correct. Especially check for 12V, 5V and GND!
 ![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Connection_Diagramm.jpg)
 
-If you are using a PH connector (with some trimming to make it smaller), the plug needs to be 180 degree turned to fit the CN105 socket (in my example below the black wire at pin 5 = 12V)
+If you are using a PH connector (with some trimming to make it smaller), the plug needs to be 180 degree turned to fit the CN105 socket (in my example below the black wire at pin 5 = TX)
 
-![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/CN105_PH.jpg)
+<p align="center">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/CN105_PH.jpg">
+</p>
 
 _The OLED display and 3 LED's are actually optional. So even without it this project should work for you._
 
