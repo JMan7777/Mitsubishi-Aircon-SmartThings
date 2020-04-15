@@ -14,6 +14,8 @@ Some of you might raise their hands now and shout "Ohh no, that's not secure!". 
 The web server on the ESP32 also serves a small root web page just showing you the current air conditioner status plus the latest log output and aalso enables you to reboot the ESP32 if it's required.
 3. I also added a small OLED display and 3 LED's to show the status of the air conditioner and some other useful information. A reboot button for the ESP32 completes the setup.
 
+_The OLED display and 3 LED's are actually optional. So even without it this project should work for you._
+
 # Requirements 
 1. A Mitsubishi air conditioner which is supported by the [HeatPump](https://github.com/SwiCago/HeatPump) project.
 2. An ESP32 module. Can have integrated or external antenna. (e.g. ESP32-DevKitC)
@@ -38,6 +40,8 @@ Assemble your parts according to the diagram.
 
 **_Attention:_** Before connectiong the 5 wires coming from your air conditoner to your assembly, always check the wiring via a multimeter to ensure it's correct. Especially check for 12V, 5V and GND!
 ![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Connection_Diagramm.jpg)
+
+_The OLED display and 3 LED's are actually optional. So even without it this project should work for you._
 
 # Comments
 You might be wondering on the following things:
