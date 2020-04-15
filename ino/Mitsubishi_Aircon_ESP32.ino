@@ -1149,7 +1149,7 @@ void setup()
   //Connect to air conditioner 
   writeDisplayMessage(1, 0, "Connecting to Aircon");
   writeDisplayMessage(2, 1000, "...", MA_DEF_LED_YELLOW_PIN);
-  ma_HeadPump.connect(&Serial2, true);
+  ma_HeadPump.connect(&Serial2);
   if (ma_HeadPump.isConnected()) 
   {
       //Enable external updates via the remote.
