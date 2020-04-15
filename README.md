@@ -1,4 +1,4 @@
-# !!! THIS PROJECT AND IT'S WEBSITE ARE STILL WORK IN PROGRESS. DO NOT USE IT YET !!!
+# !!! THIS PROJECT AND IT'S WEBSITE ARE STILL WORK IN PROGRESS !!!
 
 # Mitsubishi-Aircon-SmartThings
 Arduino sketch (.ino) and SmartThings device handler to control Mitsubishi air conditioners via Samsung SmartThings.
