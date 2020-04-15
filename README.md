@@ -55,7 +55,7 @@ Please ensure you include all required libraries and update the environment spec
 ![Mitsubishi_Aircon_ESP32.ino](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/ino/Mitsubishi_Aircon_ESP32.ino)
 
 By default your ESP32 will aquire its IP address via DHCP. After bootup you can access the ESP32 webserver status page simply via:
-http://YOURIP/
+>http://<YOURIP>/
 
 # SmartThings Device Handler
 Work in progress
