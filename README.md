@@ -28,14 +28,14 @@ The web server on the ESP32 also serves a small root web page just showing you t
 11. A little bit soldering knowledge.
 
 So you will end up with a bunch of parts costing you normally not more than 10 USD, e.g. like this:
-![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/Parts.jpg)
+![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Parts.jpg)
 "Your parts and amounts might vary based on your final assambly"
 
 # Connection Diagram
 Assemble your parts according to the diagram. 
 
 **_Attention:_** Before connectiong the 5 wires coming from your air conditoner to your assembly, always check the wiring via a multimeter to ensure it's correct. Especially check for 12V, 5V and GND!
-![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/Connection_Diagramm.jpg)
+![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Connection_Diagramm.jpg)
 
 # Comments
 You might be wondering on the following things:
