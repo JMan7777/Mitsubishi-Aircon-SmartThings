@@ -33,7 +33,7 @@ _The OLED display and 3 LED's are actually optional. So even without it this pro
 
 So you will end up with a bunch of parts costing you normally not more than 10 USD, e.g. like this:
 ![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Parts.jpg)
-"Your parts and amounts might vary based on your final assambly"
+"Your parts and amounts might vary based on your final assembly"
 
 # Connection Diagram
 Assemble your parts according to the diagram. 
