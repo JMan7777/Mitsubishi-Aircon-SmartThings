@@ -43,7 +43,11 @@ You might be wondering on the following things:
 2. Why I'm using not the 5V from the air conditioner to power the ESP32 directly. While it most likely works to power the ESP32 directly via 5V I decided to be better save than sorry and draw the power from 12V as there are no technical descriptions available on how much power can be drawn from 5V. The original Mitsubishi Wifi dongle also seems to use 12V for powering.
 
 # ESP32 Arduino Sketch
-Work in progress
+Upload the following sketch using the Arduino IDE.
+Please ensure you include all required libraries and update the environment specific settings.
+
+![Mitsubishi_Aircon_ESP32.ino](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/ino/Mitsubishi_Aircon_ESP32.ino)
+
 
 # SmartThings Device Handler
 Work in progress
