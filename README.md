@@ -65,6 +65,47 @@ By default your ESP32 will aquire its IP address via DHCP. After bootup you can 
   <dd>http://YOUR-IP-ADDRESS/</dd>
 </dl>
 
+The following is an example of sending a POWER and FAN change to the air conditioner. The webserver status page shows this as follows:
+
+![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Root_Page.jpg)
+
+The JSON sent via a POST request to:
+
+<dl>
+  <dd>http://YOUR-IP-ADDRESS/ChangeAirconSettings</dd>
+</dl>
+
+was in this case:
+
+```
+{
+  "POWER": "ON",
+  "FAN": "1"
+}
+```
+
+In the same way the SmartThings Device Handler will communicate changes to the air conditioner.
+
+To get the current settings via JSON the following request can be made:
+
+<dl>
+  <dd>http://YOUR-IP-ADDRESS/GetAirconSettings</dd>
+</dl>
+
+which results in:
+
+```
+{
+  "POWER": "ON",
+  "MODE": "COOL",
+  "TEMP": "25",
+  "FAN": "1",
+  "V_SWING": "SWING",
+  "H_SWING": "|",
+  "ROOM_TEMP": "33"
+}
+```
+
 # SmartThings Device Handler
 Work in progress
 
