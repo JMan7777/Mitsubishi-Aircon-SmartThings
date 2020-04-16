@@ -106,6 +106,8 @@ which results in:
 }
 ```
 
+_By the way, the "Latest serial output:" shown on the webserver status page is also the information you will see on the SSD1306 display._
+
 # SmartThings Device Handler
 Work in progress
 
