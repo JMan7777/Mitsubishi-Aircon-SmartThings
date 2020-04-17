@@ -113,11 +113,15 @@ Don't forget to set the ESP32 IP address, port and your temperature unit in the 
 
 ![Mitsubishi_Aircon_Device_Handler.groovy](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/groovy/Mitsubishi_Aircon_Device_Handler.groovy)
 
-_FYI: The device handler is still not pretty and WIP (source code comments e.g. missing)._
-
 <p align="center">
   <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/SmartThings_Android.jpg" width="400" >
 </p>
+
+There are also some limitations at the moment:
+1. The [HeatPump](https://github.com/SwiCago/HeatPump) library takes few seconds until it delivers back just updated settings. In case you refresh quickly after triggering an air conditioner change, you might still see the unchanged settings.
+2. Some commands might not be physically possible by your air conditioner. If e.g. your air conditioner has no heat mode, the command to change to heat mode will be accepted by the air conditioner but nothing will change. A refresh afterward will show you back the old settings. 
+
+_The device handler is still not pretty and WIP (source code comments e.g. missing, the auto refresh is not yet alligned with updates, limitations above, etc.)._
 
 # Special thanks
 ... to SwiCago for providing the Arduino library to control Mitsubishi Heat Pumps via connector CN105:
