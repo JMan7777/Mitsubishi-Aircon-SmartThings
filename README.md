@@ -117,7 +117,9 @@ Don't forget to set the ESP32 IP address, port and your temperature unit in the 
 
 _FYI: The device handler is still not pretty and WIP (source code comments e.g. missing)._
 
-![SmartThings_Android](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/SmartThings_Android.jpg)
+<p align="center">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/SmartThings_Android.jpg" width="400" >
+</p>
 
 # Special thanks
 ... to SwiCago for providing the Arduino library to control Mitsubishi Heat Pumps via connector CN105:
