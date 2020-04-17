@@ -109,7 +109,15 @@ which results in:
 _By the way, the "Latest serial output:" shown on the webserver status page is also the information you will see on the SSD1306 display._
 
 # SmartThings Device Handler
-Work in progress
+Login to https://graph.api.smartthings.com/ and install the device handler and create a related device.
+Afterwards scan in the SmartThings Classic app for new Things and add the found air conditioner.
+Don't forget to set the ESP32 IP address, port and your temperature unit in the air conditioner Things settings.
+
+![Mitsubishi_Aircon_Device_Handler.groovy](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/groovy/Mitsubishi_Aircon_Device_Handler.groovy)
+
+_FYI: The device handler is still not pretty and WIP (source code comments e.g. missing)._
+
+
 
 # Special thanks
 ... to SwiCago for providing the Arduino library to control Mitsubishi Heat Pumps via connector CN105:
