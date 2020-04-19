@@ -24,7 +24,7 @@ _The OLED display and 3 LED's are actually optional. So even without it this pro
 7. A JST 2.0 PA plug (5-pin) with wires. Unfortunately PA plugs are sometimes not easy to get. I used PH plugs with some tweaking. **Attention:** PH plugs must be inserted to the air conditioner side CN105 connector 180 degrees turned otherwise they don't fit!
 8. A small button touch switch.
 9. Some jumper cables and heat shrinking tubing.
-10. Some kind of housing if you don't want to place the components direct in your air conditioner. Even you could fit all the parts in the little detachable corner, L-shape plastic piece on the right site of your air conditioner, I decided to put mine external.
+10. Some kind of housing if you don't want to place the components direct in your air conditioner. Even you could fit all the parts in the little detachable corner, L-shape plastic piece on the right bottom site of your air conditioner, I decided to put mine external.
 11. A little bit soldering knowledge.
 
 _The OLED display and 3 LED's are actually optional. So even without it this project should work for you._
@@ -122,6 +122,14 @@ There are also some limitations at the moment:
 2. Some commands might not be physically possible by your air conditioner. If e.g. your air conditioner has no heat mode, the command to change to heat mode will be accepted by the air conditioner but nothing will change. A refresh afterward will show you back the old settings. 
 
 _The device handler is still not pretty and WIP (source code comments e.g. missing, the auto refresh is not yet alligned with updates, limitations above, etc.)._
+
+# Prototype
+Since I not have a 3D printer (yet ;)) I just placed all components in a standard socket housing.
+Another posibility is to place the components in the little detachable corner, L-shape plastic piece on the right bottom site of your air conditioner.
+
+<p align="center">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Prototype.jpg" width="400" >
+</p>
 
 # Special thanks
 ... to SwiCago for providing the Arduino library to control Mitsubishi Heat Pumps via connector CN105:
