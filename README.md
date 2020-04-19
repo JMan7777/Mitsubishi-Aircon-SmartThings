@@ -124,7 +124,7 @@ There are also some limitations at the moment:
 _The device handler is still not pretty and WIP (source code comments e.g. missing, the auto refresh is not yet alligned with updates, limitations above, etc.)._
 
 # Prototype
-Since I not have a 3D printer (yet ;)) I just placed all components in a standard socket housing.
+Since I don't have a 3D printer (yet ;)) I just placed all components in a standard socket housing.
 Another posibility is to place the components in the little detachable corner, L-shape plastic piece on the right bottom site of your air conditioner.
 
 <p align="center">
