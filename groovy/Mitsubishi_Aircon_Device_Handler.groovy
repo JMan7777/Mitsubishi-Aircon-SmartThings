@@ -39,10 +39,9 @@ metadata {
         }
 
 	preferences {
-		input("DeviceIP", "string", title:"Device IP Address", description: "ESP32 ip address", required: true, displayDuringSetup: true)
-        input("DevicePort", "string", title:"Device Port", description: "ESP32 webserver port", defaultValue: "80", required: true, displayDuringSetup: true)
-        input("DeviceTemperatureUnit", "string", title:"Temp Unit", description: "Temperature Unit (C or F)", defaultValue: "C", required: true, displayDuringSetup: true)
-        
+		input name: "DeviceIP", type: "text", title: "Device IP Address", description: "ESP32 ip address", defaultValue: "192.168.1.123", required: true, displayDuringSetup: true
+        input name: "DevicePort", type: "text", title: "Device Port", description: "ESP32 webserver port", defaultValue: "80", required: true, displayDuringSetup: true
+        input name: "DeviceTemperatureUnit", type: "text", title: "Temp Unit", description: "Temperature Unit (C or F)", defaultValue: "C", required: true, displayDuringSetup: true
 	}
 
 	simulator {
@@ -171,7 +170,6 @@ def installed() {
 }
 
 def updated() {
-	unsubscribe()
 	initialize()
 }
 
