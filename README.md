@@ -30,19 +30,26 @@ _The OLED display and 3 LED's are actually optional. So even without it this pro
 _The OLED display and 3 LED's are actually optional. So even without it this project should work for you._
 
 So you will end up with a bunch of parts costing you normally not more than 10 USD, e.g. like this:
-![Parts List](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Parts.jpg)
+
+<p align="center">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Parts.jpg" width="400">
+</p>
+
 "Your parts and amounts might vary based on your final assembly"
 
 # Connection Diagram
 Assemble your parts according to the diagram. 
 
 **_Attention:_** Before connectiong the 5 wires coming from your air conditoner to your assembly, always check the wiring via a multimeter to ensure it's correct. Especially check for 12V, 5V and GND!
-![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Connection_Diagramm.jpg)
+
+<p align="center">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Connection_Diagramm.jpg" width="400">
+</p>
 
 If you are using a PH connector (with some trimming to make it smaller), the plug needs to be 180 degree turned to fit the CN105 socket (in my example below the black wire at pin 5 = RX)
 
 <p align="center">
-  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/CN105_PH.jpg">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/CN105_PH.jpg" width="400">
 </p>
 
 _The OLED display and 3 LED's are actually optional. So even without it this project should work for you._
@@ -65,7 +72,9 @@ By default your ESP32 will aquire its IP address via DHCP. After bootup you can 
 
 The following is an example of sending a POWER and FAN change to the air conditioner. The webserver status page shows this as follows:
 
-![Connection Diagram](https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Root_Page.jpg)
+<p align="center">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Root_Page.jpg" width="400">
+</p>
 
 The JSON sent via a POST request to:
 
@@ -129,6 +138,10 @@ Another posibility is to place the components in the little detachable corner, L
 
 <p align="center">
   <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Prototype.jpg" width="400" >
+</p>
+
+<p align="center">
+  <img src="https://github.com/JMan7777/Mitsubishi-Aircon-SmartThings/blob/master/pictures/Prototype_Inside.jpg" width="400" >
 </p>
 
 # Special thanks
