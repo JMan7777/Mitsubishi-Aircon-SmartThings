@@ -116,7 +116,7 @@ metadata {
             state "|", label:'|', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
             state ">", label:'>', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
             state ">>", label:'>>', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
-			state "<>", label:'<>', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
+			state "SWING", label:'Swing', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
             state "AUTO", label:'Auto', action:"hSwing", icon:"st.motion.motion.inactive" , backgroundColor:"#ffffff", nextState: "CHANGING"
             state "CHANGING", label:'Changing', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#dcdcdc", nextState: "AUTO"
             state "?", label:'Unknown', icon:"st.motion.motion.inactive", backgroundColor:"#ffffff"
@@ -356,9 +356,9 @@ def hSwing() {
         	hSwingNew = ">>"
             break
         case ">>":
-        	hSwingNew = "<>"
+        	hSwingNew = "SWING"
             break
-        case "<>":
+        case "SWING":
         	hSwingNew = "AUTO"
             break
         case "AUTO":
