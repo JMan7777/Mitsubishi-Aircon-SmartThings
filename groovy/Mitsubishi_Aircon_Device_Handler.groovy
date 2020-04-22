@@ -116,8 +116,8 @@ metadata {
             state "|", label:'|', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
             state ">", label:'>', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
             state ">>", label:'>>', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
-			state "SWING", label:'Swing', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
-            state "AUTO", label:'Auto', action:"hSwing", icon:"st.motion.motion.inactive" , backgroundColor:"#ffffff", nextState: "CHANGING"
+			state "<>", label:'<>', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#ffffff", nextState: "CHANGING"
+            state "SWING", label:'Swing', action:"hSwing", icon:"st.motion.motion.inactive" , backgroundColor:"#ffffff", nextState: "CHANGING"
             state "CHANGING", label:'Changing', action:"hSwing", icon:"st.motion.motion.inactive", backgroundColor:"#dcdcdc", nextState: "AUTO"
             state "?", label:'Unknown', icon:"st.motion.motion.inactive", backgroundColor:"#ffffff"
 		}
@@ -174,6 +174,7 @@ def updated() {
 }
 
 def initialize() {
+	resetRefreshTile()
 	unschedule(autoRefresh)
     runEvery1Minute(autoRefresh)
 }
@@ -356,12 +357,12 @@ def hSwing() {
         	hSwingNew = ">>"
             break
         case ">>":
+        	hSwingNew = "<>"
+            break
+        case "<>":
         	hSwingNew = "SWING"
             break
         case "SWING":
-        	hSwingNew = "AUTO"
-            break
-        case "AUTO":
         	hSwingNew = "<<"
             break
         default:
