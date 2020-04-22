@@ -119,6 +119,8 @@ const String MA_CONST_AC_SETTING_FAN = "FAN";
 const String MA_CONST_AC_SETTING_V_SWING = "V_SWING";
 const String MA_CONST_AC_SETTING_H_SWING = "H_SWING";
 const String MA_CONST_AC_STATUS_ROOM_TEMP = "ROOM_TEMP";
+const String MA_CONST_AC_STATUS_OPERATING = "OPERATING";
+const String MA_CONST_AC_STATUS_COMP_FREQ = "COMP_FREQ";
 
 //******************************************************************************
 // Struct declarations.
@@ -552,6 +554,14 @@ void queueDisplayStatusUpdate(int delayMS = 0, bool writeToOutputToo = true)
      + "," +
      "H=" + ma_HeadPumpActualSettings.wideVane 
      //{"<<", "<", "|", ">", ">>", "<>", "SWING"}
+     + "," +
+     "O=" + ((ma_HeadPumpActualStatus.operating != NULL) ? 
+              String(ma_HeadPumpActualStatus.operating ? "Y" : "N"): "?")
+     // If true, the air conditioner is operating to reach the desired temperature              
+     + "," +
+     "F=" + ((ma_HeadPumpActualStatus.compressorFrequency != NULL) ? 
+        String(ma_HeadPumpActualStatus.compressorFrequency): "?")
+     //Compressor Frequency
      , 0, writeToOutputToo);
 }
 
@@ -589,11 +599,19 @@ void SendAirconSettingsJSON(AsyncWebServerRequest *request,
     ((ma_HeadPumpActualStatus.roomTemperature != NULL && 
       ma_HeadPumpActualStatus.roomTemperature > 0) ? 
         String(ma_HeadPumpActualStatus.roomTemperature).substring(0,2) : "?");
+   // If true, the air conditioner is operating to reach the desired temperature
+  doc[MA_CONST_AC_STATUS_OPERATING] = 
+    ((ma_HeadPumpActualStatus.operating != NULL) ? 
+        String(ma_HeadPumpActualStatus.operating ? "Y" : "N"): "?");
+   //Compressor Frequency
+  doc[MA_CONST_AC_STATUS_COMP_FREQ] = 
+    ((ma_HeadPumpActualStatus.compressorFrequency != NULL) ? 
+        String(ma_HeadPumpActualStatus.compressorFrequency): "?");
 
   //Serialize the JSON document to a String
   String airconSettingsAsJSON;
   serializeJsonPretty(doc, airconSettingsAsJSON);
-  //Send back to the client as JSON.
+  //Send back to the client as JSON
   request->send(200, "application/json", airconSettingsAsJSON); 
 }
 
@@ -700,6 +718,18 @@ void handleRoot(AsyncWebServerRequest *request)
         "?"
         ) 
     + (MA_DEF_AC_USE_CELCIUS ? "C" : "F") 
+    + "</th></tr>";
+    s = s + "<tr><th>" + MA_CONST_AC_STATUS_OPERATING + "</th><th>" + 
+      ((ma_HeadPumpActualStatus.operating != NULL) ? 
+        String(ma_HeadPumpActualStatus.operating ? "Y" : "N") :
+        "?"
+        ) 
+    + "</th></tr>";
+    s = s + "<tr><th>" + MA_CONST_AC_STATUS_COMP_FREQ + "</th><th>" + 
+      ((ma_HeadPumpActualStatus.compressorFrequency != NULL) ? 
+        String(ma_HeadPumpActualStatus.compressorFrequency) :
+        "?"
+        ) 
     + "</th></tr>";
     s = s + "</table>";
   }
