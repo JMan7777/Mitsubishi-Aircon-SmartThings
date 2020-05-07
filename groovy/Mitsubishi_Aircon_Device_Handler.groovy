@@ -219,16 +219,17 @@ def tempUp() {
     if (tempUnit.equals("F"))
     {
     	temp = fahrenheitToCelcius(temp)
-        temp = temp + 1
     }
     else
     {
         log.debug "No temp conversion needed."
     }
+ 
+    temp = temp + 1
 
     if (temp <= 31)
     {	
-		runCmd("TEMP", "${temp}")
+	runCmd("TEMP", "${temp}")
     }
     else
     {
@@ -245,16 +246,17 @@ def tempDown() {
     if (tempUnit.equals("F"))
     {
     	temp = fahrenheitToCelcius(temp)
-        temp = temp - 1
     }
     else
     {
         log.debug "No temp conversion needed."
     }
+	
+    temp = temp - 1	
 
-	if (temp >= 16)
+    if (temp >= 16)
     {	
-		runCmd("TEMP", "${temp}")
+	runCmd("TEMP", "${temp}")
     }
     else
     {
