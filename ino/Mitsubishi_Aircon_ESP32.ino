@@ -104,7 +104,9 @@ const uint8_t MA_CONST_SCREEN_ADDRESS = 0x3C;    // SSD1306 display address
 #define MA_DEF_LED_YELLOW_PIN 26                 // Yellow LED pin
 #define MA_DEF_LED_GREEN_PIN 27                  // Green LED pin
 #define MA_DEF_LED_BLINK_INTERVAL 250            // LED blink interval in ms
-
+#define MA_DEF_WIFI_MAX_RECONNECT_COUNT 60       // Max reconnect count if WiFi
+                                                 // connection is lost before
+                                                 // reboot
 //******************************************************************************
 // Constant settings.
 //
@@ -168,6 +170,9 @@ String          ma_StartupTimeString;
 
 //Declaration of a variable used to initiate a reboot
 bool ma_InitiateReboot = false;
+
+//Declaration of a variable used to count how many WiFi reconnects are done
+int ma_WiFiReconnectCount = 0;
 
 //******************************************************************************
 // Custom Functions
@@ -291,7 +296,7 @@ void setLEDState(int pin, int newState)
 ///Function name: nonTaskDelay
 ///Description:   Delay function with LED blink support
 ///Restriction:   To be only used outside tasks!
-///               Usage from setup() or loop() on;y!
+///               Usage from setup() or loop() only!
 ///               Blinking will only occur if 
 ///               delayMS > MA_DEF_LED_BLINK_INTERVAL.
 ///Return type:   void
@@ -1151,6 +1156,7 @@ void setup()
   WiFi.setHostname(MA_DEF_WIFI_HOSTNAME);
   WiFi.mode(WIFI_STA);
   WiFi.setAutoConnect(true);
+  WiFi.persistent(true);  
   //Connect to the network
   WiFi.begin(MA_DEF_WIFI_SSID, MA_DEF_WIFI_PASSWORD); 
   writeDisplayMessage(1, 0, "Connecting to SSID:");
@@ -1320,11 +1326,40 @@ void setup()
 /// LOOP
 ///*****************************************************************************
 void loop() {
-
   //Put your main code here, to run repeatedly.
 
-  //Process OTA requests, if any
-  ArduinoOTA.handle();
+  //Check if WiFi is still up.
+  //Sometimes after e.g. a router reboot the ESP can't reconnect.
+  if(WiFi.status() == WL_CONNECTED)
+  {
+      if (ma_WiFiReconnectCount > 0)
+      {
+        ma_WiFiReconnectCount = 0;
+        queueDisplayMessage(1, 0, "Wifi reconnected");
+        queueDisplayMessage(2, 5000, (String) "IP: " + 
+                        WiFi.localIP().toString() +
+                        "\nStrength: " + WiFi.RSSI() + " dBm", 
+                        MA_DEF_LED_YELLOW_PIN);
+      }
+  }
+  else
+  {
+      if (ma_WiFiReconnectCount < MA_DEF_WIFI_MAX_RECONNECT_COUNT)
+      {
+        queueDisplayMessage(1, 0, "Wifi disconnected");
+        queueDisplayMessage(2, 5000, (String) "Reconnection try no. " + 
+                        ma_WiFiReconnectCount + " of " + 
+                        MA_DEF_WIFI_MAX_RECONNECT_COUNT, 
+                        MA_DEF_LED_YELLOW_PIN);
+        WiFi.reconnect();
+        ma_WiFiReconnectCount++;
+        nonTaskDelay(5000);
+      }
+      else
+      {
+        ma_InitiateReboot = true;
+      }
+  }
 
   //Check if a reboot was requested
   if (ma_InitiateReboot)
@@ -1341,9 +1376,13 @@ void loop() {
       ma_AirconTaskHandle = NULL;
     }
     writeDisplayMessage(1, 0, "Reboot");
-    writeDisplayMessage(2, 5000, "Manual reboot. Restarting soon.", 
+    writeDisplayMessage(2, 5000, "Reboot initiated. Restarting soon.", 
                         MA_DEF_LED_RED_PIN);
     //Reboot the ESP32
     ESP.restart();
   }
+
+  //Process OTA requests, if any
+  ArduinoOTA.handle();
+  
 }
