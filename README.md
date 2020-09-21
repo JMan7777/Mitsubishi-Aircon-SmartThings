@@ -1,6 +1,8 @@
 # Mitsubishi-Aircon-SmartThings
 Arduino sketch (.ino) and SmartThings device handler to control Mitsubishi air conditioners via Samsung SmartThings.
 
+# Attention: The SmartThings Classic integration part of this project will not be further developed as Samsung stopped the SmartTings Classic app. As most of my other own devices are not fully functioning in the new SmartThings app as well, I'm currently migrating all my sensors, etc. to Home Assistant. The ESP32 Arduino Sketch of this project will be further maintained and I will create a new project to integrate the ESP32 into Home Assistant.
+
 # What can you do with this project?
 This project is for Mitsubishi air conditioner owners which want to control their aircons via Samsung SmartThings.
 There are a lot of projects out there which use e.g. MQTT but I wanted just simply control my Mitsubishi air conditioners direct from my Samsung SmartThings Classic app.
